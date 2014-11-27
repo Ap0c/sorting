@@ -19,7 +19,7 @@
 
 /* ---------- Functions ---------- */
 
-// Swap two elements in an array.
+// Swap two elements in an integer array.
 void swap(int *array, int i, int j) {
 
 	int temp = array[i];
@@ -30,7 +30,7 @@ void swap(int *array, int i, int j) {
 
 
 // Sorts an integer array with bubblesort.
-void bubblesort(int *array, int size) {
+void bubblesort_int(int *array, int size) {
 
 	// Flag variable for pass-through with no swaps, indicating sort complete.
 	int not_complete = 0;
@@ -52,6 +52,36 @@ void bubblesort(int *array, int size) {
 	} while (not_complete);
 
 }
+
+
+// Sorts an integer array with insertion sort.
+void insertion_int(int *array, int size) {
+
+	int item;
+	int j;
+
+	// Works through each element in turn.
+	// If item to the left is greater than current, move item to the left right
+	// one, and try again with next item on the left.
+	for (int i = 1; i < (size); i++) {
+
+		// Retains item being sorted.
+		item = array[i];
+		// Holds the insertion index.
+		j = i;
+
+		while ((j > 0) && (array[j-1] > item)) {
+			array[j] = array[j-1];
+			j--;
+		}
+
+		// Inserts item.
+		array[j] = item;
+
+	}
+
+}
+
 
 
 // Generates an integer array of (bad) random numbers, between zero and MAX.

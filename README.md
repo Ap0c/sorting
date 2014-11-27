@@ -8,4 +8,5 @@ Current Algorithms
 ==================
 
 - Bubblesort (integer).
+- Insertion Sort (integer).
 

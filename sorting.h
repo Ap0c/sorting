@@ -10,7 +10,9 @@
 // Swap two elements in an array.
 void swap(int *array, int i, int j);
 // Sorts an integer array with bubblesort.
-void bubblesort(int *array, int size);
+void bubblesort_int(int *array, int size);
+// Sorts an integer array with insertion sort.
+void insertion_int(int *array, int size);
 
 // Generates an integer array of (bad) random numbers.
 int *random_gen(int size);
